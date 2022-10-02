@@ -1,57 +1,158 @@
 package at.ac.fhcampuswien;
 
+import org.graalvm.compiler.serviceprovider.IsolateUtil;
+
 import java.util.Scanner;
 
 public class App {
 
     //todo Task 1
     public void sayHelloWorld(){
-        // input your solution here
+        System.out.println("Hello World!");
     }
 
     //todo Task 2
     public void helloRobot(){
-        // input your solution here
+        System.out.println("0123456789012345678901\n" +
+                "         __\n" +
+                " _(\\    |@@|\n" +
+                "(__/\\__ \\--/ __\n" +
+                "   \\___|----|  |   __\n" +
+                "       \\ }{ /\\ )_ / _\\\n" +
+                "       /\\__/\\ \\__O (__\n" +
+                "      (--/\\--)    \\__/\n" +
+                "      _)(  )(_\n" +
+                "     `---''---`");
     }
 
     //todo Task 3
     public void sumOfLiterals(){
-        // input your solution here
+        char Buchstabe = 'Z';
+        int Hexadezimalzahl = 0xface;
+        int Octal = 012;
+        long long_Variable = 80L;
+        double exponential = 44e-1f;
+        float zahl1 = 5.5f;
+        double exponential2 = 8.88e1;
+        double zahl2 = 99.9;
+        int sum = 0;
+        sum =  (int)Buchstabe + Hexadezimalzahl + (int) Octal + (int)long_Variable + (int)exponential + (int)exponential2 + (int)zahl1 + (int)zahl2;
+        System.out.println(sum);
     }
 
     //todo Task 4
     public void addTwoNumbers(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+        int num1 = scan.nextInt();
+        int num2 = scan.nextInt();
+        //int sum = num1 + num2;
+        System.out.println((num1+num2)+"");
     }
 
     //todo Task 5
     public void swapTwoNumbers(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Before Swap:\nx: ");
+        int num1 = scan.nextInt();
+        System.out.print("y: ");
+        int num2 = scan.nextInt();
+
+        num1 += num2;
+        num2 = num1 - num2;
+        num1 -= num2;
+        System.out.println("After Swap:\nx: " + num1 + "\ny: " + num2);
+      //  System.out.println("y: " + num2);
     }
 
     //todo Task 6
     public void compareTwoNumbers(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+        System.out.print("n1: ");
+        int num1 = scan.nextInt();
+        System.out.print("n2: ");
+        int num2 = scan.nextInt();
+        if(num1 > num2){
+            System.out.println("n1 > n2");
+        }
+        else if(num1 < num2){
+            System.out.println("n2 > n1");
+        }
+        else{
+            System.out.println("n1 == n2");
+        }
     }
 
     //todo Task 7
     public void ratingSalesPerson(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter annual Revenue: ");
+        int Umsatz = scan.nextInt();
+        if(Umsatz < 0 || Umsatz >= 100000){
+            System.out.println("Invalid Revenue");
+        }
+        else if(0 <= Umsatz && Umsatz < 20000){
+            System.out.println("Poor Sales Revenue");
+        }
+        else if(20000 <= Umsatz && Umsatz < 50000){
+            System.out.println("Average Sales Revenue");
+        }
+        else if(50000 <= Umsatz && Umsatz < 80000){
+            System.out.println("Good Sales Revenue");
+        }
+        else if(80000 <= Umsatz && Umsatz < 100000){
+            System.out.println("Excellent Sales Revenue");
+        }
     }
 
     //todo Task 8
     public void getCommissionRate(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter CommissionClass: ");
+        int ConmissionRate = scan.nextInt();
+        switch (ConmissionRate){
+            case 1:
+                System.out.println("Your Commission Rate was set to 0.01");
+                break;
+            case 2:
+                System.out.println("Your Commission Rate was set to 0.02");
+                break;
+            case 3:
+                System.out.println("Your Commission Rate was set to 0.03");
+                break;
+            case 4:
+                System.out.println("Your Commission Rate was set to 0.04");
+                break;
+            default:
+                System.out.println("Your Commission Rate was set to 0.0");
+                break;
+        }
     }
 
     //todo Task 9
     public void leapyear(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Year: ");
+        int year = scan.nextInt();
+        if(year%4 == 0 && (year%100 != 0 || year%400 == 0)){
+            System.out.println("Leapyear");
+        }
+        else{
+            System.out.println("Not a Leapyear");
+        }
     }
 
     //todo Task 10
     public void transposedNumbers(){
-        // input your solution here
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Number: ");
+        int num1 = scan.nextInt();
+        int Reversed = 0;
+        while(num1 != 0){
+            Reversed *= 10;
+            Reversed += num1%10;
+            num1 /= 10;
+        }
+        System.out.println(Reversed);
     }
 
 
