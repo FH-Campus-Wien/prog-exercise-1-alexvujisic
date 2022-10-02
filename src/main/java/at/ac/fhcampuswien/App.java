@@ -13,16 +13,16 @@ public class App {
 
     //todo Task 2
     public void helloRobot(){
-        System.out.println("0123456789012345678901\n" +
-                "         __\n" +
-                " _(\\    |@@|\n" +
-                "(__/\\__ \\--/ __\n" +
-                "   \\___|----|  |   __\n" +
-                "       \\ }{ /\\ )_ / _\\\n" +
-                "       /\\__/\\ \\__O (__\n" +
-                "      (--/\\--)    \\__/\n" +
-                "      _)(  )(_\n" +
-                "     `---''---`");
+        System.out.println("0123456789012345678901");
+        System.out.println("         __");
+        System.out.println(" _(\\    |@@|");
+        System.out.println("(__/\\__ \\--/ __");
+        System.out.println("   \\___|----|  |   __");
+        System.out.println("       \\ }{ /\\ )_ / _\\");
+        System.out.println("       /\\__/\\ \\__O (__");
+        System.out.println("      (--/\\--)    \\__/");
+        System.out.println("      _)(  )(_");
+        System.out.println("     `---''---`");
     }
 
     //todo Task 3
@@ -52,7 +52,8 @@ public class App {
     //todo Task 5
     public void swapTwoNumbers(){
         Scanner scan = new Scanner(System.in);
-        System.out.print("Before Swap:\nx: ");
+        System.out.println("Before Swap:");
+        System.out.print("x: ");
         int num1 = scan.nextInt();
         System.out.print("y: ");
         int num2 = scan.nextInt();
@@ -60,8 +61,9 @@ public class App {
         num1 += num2;
         num2 = num1 - num2;
         num1 -= num2;
-        System.out.println("After Swap:\nx: " + num1 + "\ny: " + num2);
-      //  System.out.println("y: " + num2);
+        System.out.println("After Swap:");
+        System.out.println("x: " + num1);
+        System.out.println("y: " + num2);
     }
 
     //todo Task 6
