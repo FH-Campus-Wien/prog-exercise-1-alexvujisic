@@ -1,6 +1,5 @@
 package at.ac.fhcampuswien;
 
-import org.graalvm.compiler.serviceprovider.IsolateUtil;
 
 import java.util.Scanner;
 
